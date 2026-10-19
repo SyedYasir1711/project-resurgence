@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Resurgence Showcase</title>
+<style>
+  body { margin: 0; background: #e9e6e1; font-family: system-ui, sans-serif; }
+  .canvas { display: flex; gap: 64px; align-items: flex-start; padding: 56px; width: max-content; }
+  .frame { display: flex; flex-direction: column; gap: 12px; }
+  .label { font: 600 12px ui-monospace, monospace; color: #555; }
+  iframe { border: 0; background: #0e0b0a; box-shadow: 0 10px 40px rgba(0,0,0,.18); }
+  #desk { width: 1440px; height: 4400px; }
+  #mob { width: 390px; height: 6800px; }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="frame">
+    <div class="label">DESKTOP · 1440</div>
+    <iframe id="desk" src="resurgence.html" title="Desktop"></iframe>
+  </div>
+  <div class="frame">
+    <div class="label">MOBILE · 390</div>
+    <iframe id="mob" src="resurgence.html" title="Mobile"></iframe>
+  </div>
+</div>
+<script>
+  // Grow each frame to the full height of the page it shows (ends at the footer).
+  const frames = [document.getElementById('desk'), document.getElementById('mob')];
+  function fitAll() {
+    frames.forEach(f => {
+      try {
+        const d = f.contentDocument; if (!d) return;
+        const foot = d.querySelector('footer'); if (!foot) return;
+        const h = foot.getBoundingClientRect().bottom + d.defaultView.scrollY;
+        if (h > 400 && Math.abs(f.offsetHeight - h) > 4) f.style.height = Math.ceil(h) + 'px';
+      } catch (e) {}
+    });
+  }
+  frames.forEach(f => f.addEventListener('load', () => setTimeout(fitAll, 600)));
+  setInterval(fitAll, 1500);
+</script>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Resurgence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,600;1,700;1,800&family=Permanent+Marker&family=Special+Elite&family=VT323&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/resurgence.css">
+</head>
+<body>
+
+<header id="hdr">
+  <nav class="nav-desk">
+    <a href="#story">Story</a>
+    <a href="#cast">Cast</a>
+    <a href="#top" class="home" aria-label="Resurgence home"><span class="logo">RE<span>SURGE</span>NCE</span></a>
+    <a href="#">Media</a>
+    <a href="#play">Buy</a>
+  </nav>
+  <div class="nav-mob">
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <a href="#top" aria-label="Resurgence home"><span class="logo">RE<span>SURGE</span>NCE</span></a>
+  </div>
+</header>
+
+<div class="menu" id="menu">
+  <a href="#story">Story</a>
+  <a href="#cast">Cast</a>
+  <a href="#">Media</a>
+  <a href="#play">Buy</a>
+</div>
+
+<main id="top">
+  <section class="hero" data-screen-label="Hero">
+    <div class="slot" id="hero-video-poster"><video src="images/city_fall_loop.mp4" poster="images/city_fall.jpeg" autoplay muted loop playsinline aria-hidden="true"></video></div>
+    <div class="shade"></div>
+    <div class="viewfinder" aria-hidden="true">
+      <i></i><i></i><i></i><i></i>
+      <span class="hud vf-tl"><span class="rec">●</span> REC</span>
+      <span class="hud vf-tr">SP ▸ <span id="timecode">NIGHT 01 · 02:47:19</span></span>
+      <span class="hud vf-bl">HARROW FALLS, AK · −31°F</span>
+      <span class="hud vf-br">TAPE 01/03 ▮▮▮▯</span>
+    </div>
+    <div class="hero-body">
+      <h1 class="glitch crt" data-text="20 YEARS LATER">20 YEARS LATER</h1>
+      <h2>THE HORROR HAS FOUND ITS WAY BACK.</h2>
+      <div class="hero-ctas">
+        <button class="btn btn-ghost" id="openTrailer">▶ WATCH TRAILER</button>
+        <a href="#play" class="btn btn-red">● PLAY</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="story" data-screen-label="Story">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <span class="eyebrow">CASE FILE HF-0417 · THE STORY</span>
+          <h2 class="h2">Harrow Falls</h2>
+        </div>
+      </div>
+      <div class="story-grid">
+        <article class="paper">
+          <span class="tape"></span>
+          <div class="case-head typed-label"><span>Exhibit 01</span><span>Recovered tape</span></div>
+          <div class="shot">
+            <div class="slot" id="story-01"><img src="images/research_centre.jpeg" alt="Abandoned research station in the ice"></div>
+            <span class="hud hud-tag"> SEPT. 28 2026 · 23:41:07</span>
+          </div>
+          <div class="chapter">
+            <span class="num">01</span>
+            <div>
+              <span class="stamp">Confidential</span>
+              <h3>The Thaw</h3>
+              <p>A record heatwave cracks the permafrost beneath an abandoned research station. Inside the ice, a sealed vault of tissue samples has been waiting. Within a week, the town's clinic stops answering calls.</p>
+            </div>
+          </div>
+        </article>
+        <article class="paper">
+          <span class="tape"></span>
+          <div class="case-head typed-label"><span>Exhibit 02</span><span>Recovered tape</span></div>
+          <div class="shot">
+            <div class="slot" id="story-02"><img src="images/town_fall.jpeg" alt="Harrow Falls at night after the outbreak"></div>
+            <span class="hud hud-tag">SEPT. 30 2026 · 02:47:19</span>
+          </div>
+          <div class="chapter">
+            <span class="num">02</span>
+            <div>
+              <span class="stamp">Infected</span>
+              <h3>The Resurgence</h3>
+              <p>The strain was supposed to be extinct. It has adapted instead, and the old vaccine only makes it stronger. With the roads closed and a storm rolling in, you have three nights to find out who let it out.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="cast" class="cast" data-screen-label="Cast">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <span class="eyebrow">PERSONNEL FILES</span>
+          <h2 class="h2">The survivors</h2>
+        </div>
+      </div>
+      <div class="cast-grid">
+        <article class="paper file">
+          <div class="file-top typed-label"><span>Survivor 01</span></div>
+          <figure class="polaroid">
+            <span class="tape"></span>
+            <div class="photo"><div class="slot" id="cast-mara"><img src="images/mara_voss.jpeg" alt="Mara Voss"></div></div>
+            <figcaption>The Agent</figcaption>
+          </figure>
+          <div class="file-body">
+            <h3>Mara Voss</h3>
+            <div class="file-row"><span class="typed-label">Status:</span><span>Deployed</span></div>
+            <p>Former field agent for the unit that sealed the station twenty years ago. She came back to Harrow Falls to make sure it stayed closed.</p>
+          </div>
+        </article>
+        <article class="paper file">
+          <div class="file-top typed-label"><span>Survivor 02</span></div>
+          <figure class="polaroid">
+            <span class="tape"></span>
+            <div class="photo"><div class="slot" id="cast-crane"><img src="images/elias_crane.jpeg" alt="Dr. Elias Crane"></div></div>
+            <figcaption>The Doctor</figcaption>
+          </figure>
+          <div class="file-body">
+            <h3>Dr. Elias Crane</h3>
+            <div class="file-row"><span class="typed-label">Status:</span><span>Missing</span></div>
+            <p>Designed the vaccine that ended the first outbreak. His lab notes stop the night the ice gave way.</p>
+          </div>
+        </article>
+        <article class="paper file">
+          <div class="file-top typed-label"><span>Survivor 03</span></div>
+          <figure class="polaroid">
+            <span class="tape"></span>
+            <div class="photo"><div class="slot" id="cast-reyes"><img src="images/jonah_reyes.jpeg" alt="Jonah Reyes"></div></div>
+            <figcaption>The Sheriff</figcaption>
+          </figure>
+          <div class="file-body">
+            <h3>Jonah Reyes</h3>
+            <div class="file-row"><span class="typed-label">Status:</span><span>Infected</span></div>
+            <p>The only lawman left in town. He is still fighting it, and he knows the back roads better than anyone.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="play" class="cta" data-screen-label="Play CTA">
+    <div class="slot" id="cta-bg"><img src="images/zombies.jpg" alt=""></div>
+    <div class="tint"></div>
+    <div class="cta-body">
+      <span class="eyebrow">AVAILABLE NOW · PS5 · XBOX SERIES X|S · PC</span>
+      <h2 class="glitch crt" data-text="Will you&#10;make it out?">Will you<br>make it out?</h2>
+      <a href="#" class="btn btn-red btn-lg">DOWNLOAD THE GAME</a>
+    </div>
+  </section>
+</main>
+
+<footer data-screen-label="Footer">
+  <div class="foot-grid">
+    <div class="foot-brand">
+      <span class="logo">RE<span>SURGE</span>NCE</span>
+      <div class="rating">
+        <div class="rating-box"><b>M</b><small>MATURE 17+</small></div>
+        <span>Blood and gore, intense violence, strong language</span>
+      </div>
+    </div>
+    <div>
+      <span class="foot-label">GAME</span>
+      <a href="#story">Story</a><a href="#cast">Cast</a><a href="#">Media</a><a href="#play">Buy</a>
+    </div>
+    <div>
+      <span class="foot-label">SUPPORT</span>
+      <a href="#">FAQ</a><a href="#">Contact</a><a href="#">System requirements</a>
+    </div>
+    <div>
+      <span class="foot-label">FOLLOW</span>
+      <div class="socials">
+        <a href="#" aria-label="X">X</a>
+        <a href="#" aria-label="YouTube">YT</a>
+        <a href="#" aria-label="Instagram">IG</a>
+      </div>
+    </div>
+  </div>
+  <div class="legal">
+    <span>© 2026 Resurgence. All rights reserved.</span>
+    <div><a href="#">Legal</a><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a></div>
+  </div>
+</footer>
+
+<div class="modal" id="trailer" role="dialog" aria-modal="true" aria-label="Official trailer">
+  <div class="modal-inner">
+    <div class="modal-bar">
+      <span class="hud"><span class="rec">●</span> PLAY · OFFICIAL TRAILER · 2:14</span>
+      <button class="modal-close" id="closeTrailer" aria-label="Close">✕</button>
+    </div>
+    <div class="video"><div class="slot" id="trailer-poster">Trailer video embed</div></div>
+  </div>
+</div>
+
+<script src="js/resurgence.js"></script>
+</body>
+</html>
